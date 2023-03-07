@@ -1,7 +1,12 @@
-const Favoritos = () => {
+export default function Favoritos() {
+  
     return (
-      <div>Favoritos</div>
-    )
+      <div>
+        <h1>Fotos favoritas</h1>
+        <div className="p-3 galeria grid-columns-4">
+         
+        </div>
+      </div>
+    );
   }
   
-  export default Favoritos;
