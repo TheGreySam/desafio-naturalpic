@@ -11,7 +11,7 @@ import info from './fotos.json'
 
 function App() {
   
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([info]);
   const sharedState = { data, setData }
   //const endpoint = './fotos.json'
   console.log(info)
