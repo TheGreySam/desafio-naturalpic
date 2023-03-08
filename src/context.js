@@ -1,3 +1,5 @@
 import { createContext } from "react";
-const FotosContext = createContext({})
+//const endpoint = "/fotos.json"
+const FotosContext = createContext({});
+//console.log(endpoint.id)
 export default FotosContext
