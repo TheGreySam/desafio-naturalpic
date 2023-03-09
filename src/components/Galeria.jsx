@@ -1,7 +1,7 @@
 import "../assets/css/galeria.css";
 import { useState, useContext } from "react";
 import FotosContext from "./../context";
-import Heart from "./Heart";
+//import Heart from "./Heart";
 import CorazonBtn from "./CorazonBtn"
 
 export default function Home() {
@@ -18,14 +18,15 @@ export default function Home() {
       <img className="card-img photo" src={obj.src.portrait} alt=""></img>
       <div className="card-img-overlay ">
       <div>
-        <h5>like button</h5>
-        <h2 onClick={() => setLike((prevState) => !prevState)}>
+        
+       
+      {/*   <h2 onClick={() => setLike((prevState) => !prevState)}>
           Like: {like ? "heart.svg" : "heart-filled.svg"}
-        </h2>
+        </h2> */}
         
         <CorazonBtn />
       </div>
-        <h5>{obj.liked}</h5>
+        
         <h5 className="card-footer">{obj.alt}</h5>
       </div>
     </div>
