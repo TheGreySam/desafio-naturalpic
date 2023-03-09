@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.photo {
+  height: 40vh;
+  max-width: 80vh;
+}
+.heart {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.photocontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200pt, auto));
+  row-gap: 1em;
+  column-gap: 1em;
+  /* flex-wrap: wrap; */
+}
+.CorazonBtn {
+  line-height: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+}
+.CorazonBtn .Corazon {
+  stroke: #ababab;
+  transition: transform 100ms;
+  /**/
+}
+.CorazonBtn:active .Corazon {
+  transform: scale(0.7);
+}
+.CorazonBtn--liked .Corazon {
+  fill: rgb(255, 0, 0);
+  stroke: rgb(255, 0, 0);
+}

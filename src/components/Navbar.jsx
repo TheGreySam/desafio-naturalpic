@@ -9,7 +9,6 @@ export default function Navigation() {
                     <Link to="/" className="text-white ms-3 text-decoration-none">
                         Home
                     </Link>
-                    |
                     <Link to="/Favoritos" className="text-white ms-3 text-decoration-none">
                     Favoritos
                     </Link>
