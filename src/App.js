@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 //import axios from 'axios';
-import Context from './context';
+import FotosContext from './context';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './views/Home';
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={{ data, setData }}>
+      <FotosContext.Provider value={{ data, setData }}>
         <BrowserRouter>
           <Navbar></Navbar>
           <Routes>
@@ -28,7 +28,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
-      </Context.Provider>
+      </FotosContext.Provider>
 
     </div>
   );

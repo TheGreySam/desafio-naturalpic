@@ -1,20 +1,33 @@
 import "../assets/css/galeria.css";
 import { useContext } from "react";
-import Context from "./../context";
-//import Heart from "./Heart";
+import FotosContext from "./../context";
+import Heart from "./Heart";
 
 export default function Home() {
-  const value = useContext(Context);
-  //console.log(value)
-  //const datalist = data.map(photos => <li> {photos} </li>)
+  const { data } = useContext(FotosContext);
   
+  const Corazon = Heart
 
-  return (
-    <Context.Consumer>
-      <div className="galeria grid-columns-5 p-3">
-      <h1> {value} </h1>
+  console.log(data)
+
+  const datos = data[0];
+
+  const photorender = datos.map((obj) => (
+    <div key={obj.id} className="card foto  text-white">
+      <img className="card-img" src={obj.src.portrait} alt=""></img>
+      <div className="card-img-overlay">
+      <div className="card-header">{ Corazon }</div>
+        <h5 className="card-title">{obj.alt}</h5>
+      </div>
     </div>
-    </Context.Consumer>
-    
-  );
+  ))
+   
+  return (
+      <div className="container">
+        <div> {Corazon} </div>
+        <div className="galeria grid-columns-5 p-3">
+      { photorender } 
+    </div>
+      </div>
+    )
 }
