@@ -11,15 +11,15 @@ import info from './fotos.json'
 
 function App() {
   
-  const [data, setData] = useState([info]);
-  const sharedState = { data, setData }
+  const [data, setData] = useState([info.photos]);
+  //const sharedState = { data, setData }
   //const endpoint = './fotos.json'
-  console.log(info)
+  //console.log(info)
 
 
   return (
     <div className="App">
-      <Context.Provider value={sharedState}>
+      <Context.Provider value={{ data, setData }}>
         <BrowserRouter>
           <Navbar></Navbar>
           <Routes>

@@ -5,12 +5,15 @@ import Galeria from "../components/Galeria";
 export default function Home() {
     //const { data, setData } = useContext(Context)
   return (
-    <div id="Home">
+  
+      <div id="Home">
       <h1>Natural Pic</h1>
       
       
 
       <Galeria />
     </div>
+   
+    
   );
 }
